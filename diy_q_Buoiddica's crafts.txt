@@ -56,11 +56,11 @@
 
 [SUBMENU_START:utility article]
 
-.Twisted cord. 		"Cord"		[phys:hands,one-armed] *CARPENTRY* /45/ [patch]
+.Twisted cord. 		"Cord"		[phys:hands,one-armed] *HIDEWORKING* /45/ [patch]
 {Fibre from *} #0.5#	[remove] [patchwise] 'fibre'   [name:%s cord] [naming:last word]
 [WEIGHT:0.5]
 
-.Twisted and braided rope. "Rope"		[phys:hands,one-armed] *CARPENTRY* %-10% /2h/ [patch:5]
+.Twisted and braided rope. "Rope"		[phys:hands,one-armed] *HIDEWORKING* %-10% /2h/ [patch:5]
 {Fibre from *} #1#	[remove] [patchwise] 'fibre'   [name:%s rope] [naming:last word]
 [WEIGHT:1]
 
@@ -143,17 +143,18 @@
 [PRICE:0]
 [TILEGFX:bc-fibre]
 
-.Birch-bark box. [phys:hands,one-armed] /1h/ [noquality]
+.Birch-bark box. [phys:hands,one-armed] *CARPENTRY* /1h/ 
 {Birch-bark lace}	[remove]
 {Knife}
 
-.Birch-bark backpack. "Birch-bark basket" [phys:hands,one-armed] /5h/ [noquality]
-{Birch-bark lace}	(4)	[remove]
-[CONT_CAPACITY:10]
-{Knife}
-[TILEGFX:bc-bbbpack]
+//.Birch-bark backpack. "Birch-bark basket" [phys:hands,one-armed] /5h/ 
+//{Birch-bark lace}	(4)	[remove]
+//[CONT_CAPACITY:10]
+//{Knife}
+//[TILEGFX:bc-bbbpack]
+// Edited out cuz I don't see the point.
 
-.Birch-bark basket. [phys:hands,one-armed] /5h/ [noquality]
+.Birch-bark basket. [phys:hands,one-armed] *CARPENTRY* /5h/ 
 {Birch-bark lace}	(5)	[remove]
 {Knife}
 

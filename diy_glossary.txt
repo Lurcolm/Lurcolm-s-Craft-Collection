@@ -8,21 +8,14 @@
 {Slender trunk} [remove] [noquality]
 {Rope} [remove]
 {Knife}
-// Decided to make things more skill focused. It'd fuck you over if you don't have an axe,
-// but I think it's applicable.
 
 .Stone knife. [effort:2]    [phys:hands]  /90/   %-35%   *CARPENTRY* 
 {Rock} '+for blade' [remove] [noquality]
 {Rock} '+for knapping' [noquality]
-// Decided to make things more skill focused. It'd fuck you over if you don't have an axe,
-// but I think it's applicable.
 
 .Club. [effort:2] [phys:arms,one-armed]		*CARPENTRY*		/30/
 {Slender trunk} [remove] [noquality]
 {Cutting weapon} <Axe> 			
-//At first I thought "It's a club. It can't be that hard."
-//But there is a difference between a stick and, for local example, a knopkierie (LookItUp)
-
 
 .Javelin. [effort:1] [phys:hands,one-armed]	*CARPENTRY*		/30/				[patch]
 {Staff} [remove] [patchwise]
@@ -93,7 +86,7 @@
 {Cloth} #1# [remove]          [patchwise]
 {Cutting weapon or by hand}
 
-.Leather rope. [effort:1] [phys:arms,one-armed]	*HIDEWORKING*		/60/	%50% |-1| [patch:5]
+.Leather rope. [effort:1] [phys:arms,one-armed]	*COMMON*		/60/	%50% |-1| [patch:5]
 {Leather} #1# [remove] [patchwise]
 {Knife}
 {Water} #1# [remove] [patchwise]		
