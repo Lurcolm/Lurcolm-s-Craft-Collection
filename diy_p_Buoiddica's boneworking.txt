@@ -1,0 +1,186 @@
+// Part of Buoidda's crafts 1.5+ in Lurcolm's Crafts Collection
+//Commented out bones and antlers from deer, and teeth from bears. Those are already established as of version 3.51.
+//also edited the use of adhesives
+
+[SUBMENU_START:Boneworking]
+
+.Dried sinew fibre. (5)	"Hunting horn"	[phys:hands,one-armed] /15/ \4h\ *HIDEWORKING* %20%
+{*backstrap}	#1#	[remove]		'deers back tendon'
+{Knife}				[noquality]	'+for scraping clean'
+[NAME:Fibre from sinew]
+[WEIGHT:0.1]
+[TILEGFX:bc-fibre]
+
+.Bone fishhook. "Hunting horn" [effort:0] [phys:hands,one-armed] *CARPENTRY* %-30% /60/
+{*bone} #0.1# 	[remove] [noquality] 'bone'
+{Fibre from*} 		[remove] [noquality]		'Some fibre'
+{Pitch glue}		[remove] [noquality]		'+as waterproof adhesive'
+{Fire}				 [noquality]		'+to apply glue'
+{Knife}<Small knife>
+[WEIGHT:0.05]
+[MATERIAL:antler]
+[NAME:Fishhook]
+[PRICE:0]
+[TILEGFX:bc-hook]
+
+.Antler comb.	"Hunting horn" [effort:1] [phys:hands,one-armed] *CARPENTRY* %-20% /3h/
+{*stag antler}	#1#	[remove] [noquality]			'stag antler'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[MATERIAL:antler]
+[PRICE:5]
+[TILEGFX:bc-acomb]
+
+//.Reindeer bone. (4) "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+//{*carcass*} 		'Pick up reindeer carcass' 
+//{Knife} 			'+to cut leg bones out'
+//[TYPE:food]
+//[SPOILAGE_DAYS:7]
+//[CARB:0]
+//[FAT:9.7]
+//[PROTEIN:0.3]
+//[WATER:0]
+//[MATERIAL:bone]
+//[WEIGHT:1]
+//[PRICE:0]
+//[TILEGFX:bc-bone]
+// Carcass needs to be butchered until (largely cut) and then it should be light enough to pick up
+
+.Reindeer gut. (2) "Cord" [effort:1] [phys:arms] *COMMON*  /5/ [noquality]
+{*carcass*} 		'Pick up reindeer carcass' 
+{Knife} 			'+to cut gut off'
+[TYPE:skin]
+[SPOILAGE_DAYS:1]
+[MATERIAL:bone]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-gut]
+
+.Reindeer backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+{*carcass*}		'Pick up reindeer carcass'
+{Knife}
+[TYPE:tool]
+[WEIGHT:1]
+[PRICE:0.5]
+[TILEGFX:bc-backstrap]
+
+//.Reindeer antler. (2) "Hunting horn" [effort:2] [phys:arms] *COMMON* /5/ [noquality]
+//{*carcass*} 		'Pick up big reindeer carcass'
+//{Axe} 				'+to hack antlers off'
+//[TYPE:tool]
+//[MATERIAL:antler]
+//[WEIGHT:4]
+//[PRICE:2]
+//[TILEGFX:bc-rdantler]
+// This was meant to use only *big reindeer carcass* but "big" becomes "small" as the carcass gets (largely cut)
+
+//.Elk bone. (4) "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+//{*elk carcass*}			'Pick up elk carcass'
+//{Knife}				'+to cut leg bones out'
+//[TYPE:food]
+//[SPOILAGE_DAYS:7]
+//[CARB:0]
+//[FAT:9.7]
+//[PROTEIN:0.3]
+//[WATER:0]
+//[MATERIAL:bone]
+//[WEIGHT:2]
+//[PRICE:0]
+//[TILEGFX:bc-bone]
+
+.Elk gut. (4) "Cord" [effort:1] [phys:arms] *COMMON*  /5/ [noquality]
+{*elk carcass*} 		'Pick up elk carcass' 
+{Knife} 			'+to cut gut off'
+[TYPE:skin]
+[SPOILAGE_DAYS:1]
+[MATERIAL:bone]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-gut]
+
+.Elk backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+{*elk carcass*}			'Pick up elk carcass'
+{Knife}
+[TYPE:tool]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-backstrap]
+
+//.Bear tooth. (4) "Hunting horn" [effort:2] [phys:arms] *COMMON* /5/ [noquality]
+//{*carcass*}			'Pick up bear carcass'
+//{Cutting weapon}		'+to cut teeth off'
+//[TYPE:tool]
+//[MATERIAL:bone]
+//[WEIGHT:0.05]
+//[PRICE:0]
+//[TILEGFX:bc-tooth]
+// [name] and [naming] -tags don't work with carcasses
+
+.Bear tooth necklace. "Birch-bark necklace" [effort:0] [phys:hands] *COMMON* /2h/ [noquality]
+{*Bear tooth}	(12)	[remove]	'Bears canine teeth'
+{Pitch glue}		[remove]	'+for sockets'
+{Fire}					'+for warming the glue'
+{*Cord}			[remove]	'Cord'
+{Knife}<Small knife>
+[MATERIAL:bone]
+[WEIGHT:0.2]
+[PRICE:48]
+[TILEGFX:bc-bearnlace]
+
+[SUBMENU_END:Boneworking]
+
+[SUBMENU_START:Fletching]
+
+.Antler-tipped blunt arrow. "Blunt arrow" [effort:1] [phys:hands,one-armed]  *CARPENTRY*   %10%    /70/ \1d\ [patch:5]
+{Wooden stake}		[remove] [patchwise] [noquality]
+{*antler}	#0.1#	[remove] [noquality]			'antler'
+{*glue} 		[remove] [noquality] 			'+For attaching bits'
+{Fire} 								'+for applying glue'
+{Feather} (3)		[remove] [patchwise] [noquality]
+{Fibre from*} 		[remove] [patchwise] [noquality]	'Some fibre'
+{Knife}<Small knife>
+[WEIGHT:0.35]
+[BLUNT_ATTACK:7]
+
+.Fowling arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*        /30/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{Forked*arrowhead}	[remove] [patchwise]			'Forked arrowhead'
+{Feather} (3)		[remove] [patchwise] [noquality]
+{Fibre from*} 		[remove] [patchwise]			'Some fibre'
+{Knife} <Small knife>
+[WEIGHT:0.15]
+[POINT_ATTACK:5]
+[TILEGFX:bc-fowlarrow]
+
+.Bone arrowhead. "Hunting horn" [effort:1] [phys:hands]   *CARPENTRY*  %-20% /15/ |-2|   [patch]
+{*bone}  #0.1# [remove] [patchwise] [noquality]	'bone'
+{Knife}<Small knife>
+[TYPE:tool]
+[MATERIAL:bone]
+[WEIGHT: 0.03]
+[NAME:Arrowhead]
+[PRICE:0]
+[TILEGFX:bc-barrowhd]
+// Only appears in the menus if fletching is also installed
+
+.Forked bone arrowhead. "Hunting horn" [effort:1] [phys:hands]   *CARPENTRY*  %-10% /30/ |-1|   [patch]
+{*bone}  #0.25# [remove] [patchwise] [noquality]	'bone'
+{Knife}<Small knife>
+[TYPE:tool]
+[MATERIAL:bone]
+[WEIGHT: 0.05]
+[NAME:Forked arrowhead]
+[PRICE:0]
+[TILEGFX:bc-forkbahd]
+
+[SUBMENU_END:Fletching]
+
+[SUBMENU_START:utility articles]
+
+.Fishing rod.  [effort:0] [phys:hands,one-armed] *CARPENTRY* /2h/
+{Staff}			[remove]
+{*fishhook}		[remove]	'Fishhook'
+{*Cord} (2)		[remove]	'Cord'
+{Knife}<Small knife>
+
+[SUBMENU_END:utility articles]

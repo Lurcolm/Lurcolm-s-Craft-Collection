@@ -1,0 +1,203 @@
+// Part of Buoidda's crafts 1.5+
+
+[SUBMENU_START:lumber]
+
+.Split spruce twig. (2) "Cord" [effort:1] [phys:hands,one-handed] 	*COMMON* /10/ [noquality] [patch]
+{Spruce twig}	[remove] [patchwise]
+{Knife}<Small knife>
+[MATERIAL:wood]
+// This is a readily available general tying equipment.
+// For any mod recipe that previously had {Tying equipment} requirement
+// I recommend assessing if {*cord} 'Cord' would be better:
+// Like bows, arrows, bags, nets, fishing rods etc.
+
+.Birch root. "Cord" [effort:2] [phys:hands,one-handed] 	*COMMON* /20/ [noquality] [patch]
+{[NEARBY_TILE:birch]}					+'A birch nearby'
+{Knife}
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-birchroot]
+// Should only be usable when soil isn't frozen
+//
+// This is a readily available general tying equipment.
+// For any mod recipe that previously had {Tying equipment} requirement
+// I recommend assessing if {*cord} 'Cord' would be better:
+// Like bows, arrows, bags, nets, fishing rods etc.
+// To prevent roots being used in such recipes.
+
+.Split trunk. "Board" (4) [effort:4] [phys:stance,arms] *TIMBERCRAFT* %10% /30/ |0|
+{Tree trunk}		[remove] [ground] [noquality] 	+'A trunk to split into halves' 
+{Axe}<Splitting axe>
+[MATERIAL:wood]
+[WEIGHT:60]
+[TILEGFX:bc-trunkhalf]
+// Usable as boards, used as bowstaves
+
+.Charcoal.  (50) "Firewood" [effort:3] [phys:arms,hands,stance] *TIMBERCRAFT* /60/ \5d\ |-1| [patch:5] [noquality]
+{Slender trunk} (3) 	[remove] 			'+for a chimney'  
+{Firewood}  (50)	[remove] [ground][patchwise]	'+piled around it'
+{Shovel}<Shovel> 					'+to cover it all in soil'
+{Fire}       						'+lit nearby'
+{Torch}  						'+to transfer the flame'
+[WEIGHT:1]
+[TILEGFX:bc-coal]
+// From Rain's Ironworking mod v0.91
+
+.Pitch Glue.   "Hunting horn" [effort:2] [phys:arms,hands] *TIMBERCRAFT* /30/ \8h\ |-2| [noquality] [patch]
+{Pot} 							'+to collect the glue'  
+{*birch-bark*}  #5#	[remove] [patchwise]		+'birch-bark'
+{Shovel}<Shovel> 					'+to cover it in soil'
+{Firewood}  (10)	[remove] [patchwise][ground]	'+piled around it'
+{Fire}       						'+lit nearby'
+[WEIGHT:1]
+[TILEGFX:bc-pitchglue]
+
+[SUBMENU_END:lumber]
+
+[SUBMENU_START:utility article]
+
+.Twisted cord. 		"Cord"		[phys:hands,one-armed] *CARPENTRY* /45/ [patch]
+{Fibre from *} #0.5#	[remove] [patchwise] 'fibre'   [name:%s cord] [naming:last word]
+[WEIGHT:0.5]
+
+.Twisted and braided rope. "Rope"		[phys:hands,one-armed] *CARPENTRY* %-10% /2h/ [patch:5]
+{Fibre from *} #1#	[remove] [patchwise] 'fibre'   [name:%s rope] [naming:last word]
+[WEIGHT:1]
+
+.Sauna scoop. [effort:2] [phys:arms,one-armed]		/90/	[noquality]		
+{Block of wood} [remove]
+{Axe} 		<Carving axe>	
+{Knife}
+
+.Wooden tub.		[effort:2] [phys:arms,hands] 		*CARPENTRY*	/4h/
+{Board}	(6)		[remove]
+{Split spruce twig} (8)	[remove] [noquality]
+{Axe}<Carving axe>
+{Knife}<Small knife>
+
+.Net. 			[effort:1] [phys:hands]			*HIDEWORKING*   /8h/
+{*Cord}		  (40) 	[remove]		'Plant fiber cord'
+{Slender trunk}   (2) 	[noquality] [ground] 	'+to support tying'
+{Birch-bark lace} (5)	[remove] [noquality]	'+to make floats'
+{Rock}   	  (10) 	[remove] [noquality]	'+for net weights'
+{Knife} <Small knife>
+[WEIGHT:10]
+// Excess weight because of working time constraints
+
+//.Net weight vanillazation. 	"Net"	/1/ %100%
+//{Net}		[remove]
+//[NAME:Net]
+
+[SUBMENU_END:utility article]
+
+[SUBMENU_START:transport]
+
+.Punt.			[effort:2] [phys:hands] 		*CARPENTRY*	/10h/
+{Board}		(20)	[remove]
+{Birch root}	(30)	[remove] [noquality]		'+for sewing'
+{Pitch glue}	(10)	[remove] [noquality]		'+for sealing'
+{Fire}				 [noquality]		'+for applying glue'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[WEIGHT:100]
+
+[SUBMENU_END:transport]
+
+[SUBMENU_START:Barkware]
+
+.Willow-bark. "Bark" [phys:hands,one-armed] [noquality]		/5/ [patch]
+{[NEARBY_TILE:BUSHES]} 				+'Bushes nearby'
+[WEIGHT:1]
+
+.Alder-bark. "Bark" [phys:hands,one-armed] [noquality]		/10/ [patch]
+{[NEARBY_TILE:ALDER]} 			    	+'Alder nearby'
+{Knife}
+[WEIGHT:1]
+
+.Fibre from bark. "Hunting horn" (7) [phys:hands,one-armed] *TIMBERCRAFT* %-20% /45/ [patch:5]
+{*-bark}	#1#	[remove] [noquality] [patchwise] [name:Fibre from %s] [naming:original] 'willow or alder bark'
+{Knife}				 [noquality]
+[MATERIAL:birch-bark]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre]
+
+.Birch-bark lace. "Cord" [phys:stance,hands,one-armed] /20/ [noquality] [patch]
+{[NEARBY_TILE:BIRCH]}					+'Birch nearby'
+{Knife}
+[MATERIAL:birch-bark]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-birchlace]
+// This is a readily available general tying equipment.
+// For any mod recipe that previously had {Tying equipment} requirement
+// I recommend assessing if {*cord} 'Cord' would be better:
+// Like bows, arrows, bags, nets, fishing rods etc.
+// To prevent roots being used in such recipes.
+
+.Fibre from birch-bark. "Hunting horn" (5) [phys:hands,one-armed] *TIMBERCRAFT* %-70% /1h/ [patch:5]
+{Birch-bark*}	#1#	[remove] [noquality] [patchwise] [name:Fibre from birch-bark] 'birch-bark'
+{Knife}				 [noquality]
+[MATERIAL:birch-bark]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre]
+
+.Birch-bark box. [phys:hands,one-armed] /1h/ [noquality]
+{Birch-bark lace}	[remove]
+{Knife}
+
+.Birch-bark backpack. "Birch-bark basket" [phys:hands,one-armed] /5h/ [noquality]
+{Birch-bark lace}	(4)	[remove]
+[CONT_CAPACITY:10]
+{Knife}
+[TILEGFX:bc-bbbpack]
+
+.Birch-bark basket. [phys:hands,one-armed] /5h/ [noquality]
+{Birch-bark lace}	(5)	[remove]
+{Knife}
+
+.Birch-bark cap. [phys:hands,one-armed]   *CARPENTRY*  %10% /90/ |-2|
+{Birch-bark lace}	(2)	[remove]
+{Knife}					 [noquality]
+
+.Birch-bark shoes. [phys:hands,one-armed]   *CARPENTRY*  %10% /2h/ |-2|
+{Birch-bark lace} 	(3)	[remove]
+{Knife}					 [noquality]
+
+.Birch-bark necklace. [phys:hands,one-armed]   *CARPENTRY*  %-30% /6h/ |-2|
+{Birch-bark lace}	[remove]
+{Knife}<Small knife>
+
+[SUBMENU_END:Barkware]
+
+[SUBMENU_START:Earthenware]
+
+.Dig clay. "Hunting Horn" [effort:2] [phys:arms,hands,stance] 	*COMMON*	/1/ [noquality] [patch]
+{[TERRAIN:lake river]}				'Lake or river (not rapids)'
+{[TILE:Hole in the ground]}			'Pit for digging clay'
+{Shovel}<Shovel>
+[NAME:clay lump]
+[MATERIAL:stone]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-clay]
+
+.Dig clay from sea shore. "Hunting Horn" [effort:2] [phys:arms,hands,stance] 	*COMMON*	/1/ [noquality] [patch]
+{[TERRAIN:sea]}				'Sea shore'
+{[TILE:Water]}				'Stand in water'
+{Shovel}<Shovel>
+[NAME:clay lump]
+[MATERIAL:stone]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-clay]
+
+.Clay pot. "Pot"	[effort:0] [phys:hands,one-armed] 	*COMMON* 	/30/ \3h\
+{Clay lump}	(5)	[remove]
+{Fire}
+[PRICE:0]
+[CONT_CAPACITY:5]
+[TILEGFX:bc-claypot]
+
+[SUBMENU_END:Earthenware]

@@ -1,0 +1,6 @@
+.Weaving. 		-X- 	*MAKE*
+.Cloth Garments.	-Y-	*MAKE*
+.Woollen Garments.	-Z-	*MAKE*
+
+
+-end

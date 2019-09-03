@@ -1,0 +1,66 @@
+[SUBMENU_START:utility articles]
+
+.Wooden comb.	"Hunting horn" [effort:1] [phys:hands,one-armed] *CARPENTRY* %-20% /3h/
+{block of wood}	1	[remove] [noquality]			'+Wooden Block'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[MATERIAL:wood]
+[PRICE:2.5]
+[TILEGFX:lcc-wcomb]
+
+[SUBMENU_END:utility articles]
+
+[SUBMENU_START:weapon]
+
+.Stone Spear. "Spear" [effort:2] [phys:arms,hands] *CARPENTRY* 	/3h/
+{Stone}	'+for blade' [remove] [noquality]
+{Stone} '+For grinding an edge' [noquality]
+{Rock}	'+for knapping' [noquality]
+{slender tree trunk}	[remove] [noquality]
+{Rope}	[remove]
+{Knife}
+[BLUNT_ATTACK:3]
+[POINT_ATTACK:6]
+[TILEGFX:llc-stnspear]
+
+.Wooden Maul. "maul" [effort:3] [phys:arms,hands] *Carpentry* /5h/
+{log}					[remove] [ground] [noquality]
+{axe} <handaxe>		'+for cutting rough shape'
+{axe} <Carving Axe>	'+for refining shape'
+{fire}			'+for hardening'
+
+.Small flail. "Small Flail" [effort:2] [phys:arms,one-armed] *CARPENTRY*   		/120/ 			%30%  	|-1|	
+{Slender trunk} [remove]
+{Rope}		[remove]
+{Axe} <Carving axe>		
+{Knife}
+
+
+[SUBMENU_END:weapon]
+
+[SUBMENU_START:Hideworking]
+
+.Hide Glue.   "Hunting horn" [effort:2] [phys:arms,hands] *HIDEWORKING* /30/ \8h\ |-2| [noquality]
+{Pot} 							'+to collect the glue'  
+{cured*skin} #1# [remove]				'cured hide for boiling down'
+{water}	#3# [remove]	
+{Fire}       						'+lit nearby'
+[WEIGHT:1]
+[TILEGFX:lcc-hideglue]
+
+[SUBMENU_END:Hideworking]
+
+[SUBMENU_START:Bowying]
+
+.Crossbow. "Crossbow" [Effort:2] [phys:arms,hands] *CARPENTRY* %-10% /400/ \1d\ |2|
+{Split trunk} 			[remove] 	'Split birch trunk'
+{board}	2			[remove]	'+For body'
+{staff}				[remove]	'+for mechanisms and struts'
+{*glue}				[remove]	'Glue for attaching pieces'
+{rope}				[remove]	'+For securing body'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+{Fire} 						'+for treating the belly'
+{Bowstring}			[remove]
+
+[SUBMENU_END:Bowying]

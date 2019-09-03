@@ -1,0 +1,345 @@
+// Part of Buoidda's crafts 1.5+
+// This is Rain's clothing mod v3 with Buoidda's modifications:
+// - commented out .String. .Hemp rope. and Testing submenu
+// - many {Tying equipment} changed to {*Yarn} or {*Cord}
+// - added .Weave wool cloth.
+// - .Spin Yarn. : 'Plant Fibre' -> 'Fibre'
+
+[SUBMENU_START:Weaving]
+
+.Soak Nettles.	"Rock"		[noquality]	*AGRICULTURE*	/1/  \14d\	[patch:20]	|-2| 	[effort:1] [phys:arms,stance,one-armed]	
+{Nettle}				[remove] [patchwise] [name:Retted %s] [naming:last word]
+{Water}		(1000)	'Be near water'
+//[TILE:Water River Rapids]
+[TILEGFX:rc-retted]
+[TYPE:tool]
+[WEIGHT:2]
+			
+.Soak Hemp.	"Rock"		[noquality]	*AGRICULTURE*	/1/  \14d\	[patch:20]	|-2|	[effort:1] [phys:arms,stance,one-armed]
+{Hemp}					[remove] [patchwise]  [name:Retted %s] [naming:last word]			
+{Water}		(1000)	'Be near water'
+//[TILE:Water River Rapids]
+[TILEGFX:rc-retted] 
+[TYPE:tool]
+[WEIGHT:2]
+
+.Dry Retted Plants.  "Branch"	[noquality]	*AGRICULTURE*	/2/  \7d\	[patch:20]	|-2|	[effort:1] [phys:arms,stance,one-armed]
+{Retted *} 				[remove] [patchwise] [name:Dried Retted %s] [naming:last word]	'Retted Hemp or Nettle'	
+//[TILEGFX:rc-dried] 
+[TYPE:tool]
+[WEIGHT:0.25]
+
+.Extract Fibre. 	"Rock"	[noquality]	/15/ 	[patch:10] 	[effort:3] 	[phys:arms,stance]
+{Dried Retted *} 	 		[remove] [patchwise] [ground] [name:Fibre from %s] [naming:last word] 'Dried, Retted Plants'
+{Club} 		'+for scutching'
+{Knife}
+[TILEGFX:rc-fibre]
+// Icon provided by Kaaven from the Urw Forums, modified
+[TYPE:tool]
+[WEIGHT:0.1]
+
+.Spin Yarn. 		"Cord" 	[noquality]	/1h/ 	[patch:5]	[effort:1] 	[phys:hands,one-armed]	
+{*ibre from *} 		#0.5#	[remove] [patchwise]  [name:%s Yarn] [naming:last word] 'Fibre'
+{Spindle and Distaff}
+[TILEGFX:rc-yarn]
+// Icon provided by Kaaven from the Urw Forums, modified
+// 'Plant Fibre' -> 'Fibre'
+[PRICE:5]
+
+.Weave Nettle Cloth. 		"Bandage" 	/6h/ 	*COMMON*	%25%	[effort:2] [phys:arms,hands,stance]
+{Nettle Yarn} 	(10) 	[remove] [name:Nettle Cloth]
+{Loom}				
+[WEIGHT:5]
+[MATERIAL:cloth]
+[PRICE:30]
+[TILEGFX:rc-cloth]
+
+.Weave Linen Cloth. 		"Bandage" 	/6h/ 		*COMMON*	%25%	[effort:2] [phys:arms,hands,stance]
+{Hemp Yarn} 	(10) [remove]  [name:Linen Cloth]
+{Loom}			
+[WEIGHT:5]
+[MATERIAL:cloth]
+[PRICE:45]
+[TILEGFX:rc-cloth] 
+
+.Weave Wool Cloth. 		"Bandage" 	/6h/ 		*COMMON*	%25%	[effort:2] [phys:arms,hands,stance]
+{Wool Yarn} 	(10) [remove]  [name:Woollen cloth]
+{Loom}			
+[WEIGHT:5]
+[MATERIAL:cloth]
+[PRICE:60]
+[TILEGFX:rc-cloth]
+// Buoidda's addition based on above
+
+.Spindle and Distaff.	"Wooden stake"	*CARPENTRY*	%25%		/45/	[effort:1] [phys:hands]
+{Staff}			(1) 	[remove] '+to hold the fibre'
+{Rock}			(1) 	[remove] '+for a spindle'
+{*Cord}	(1) 			[remove] 'Cord'
+{Knife}
+[WEIGHT:2]
+[TYPE:tool]
+[PRICE:10] 
+[TILEGFX:rc-distaff]
+// Icon provided by Kaaven from the Urw Forums
+
+.Loom.			"Board"		*CARPENTRY*	|1|		/3h/	[noquality]	[effort:2] [phys:arms,hands,stance]
+{Board} 	 		(3) 	[remove]
+{Wooden stake}			(1) 	[remove] '+for a heddle'
+{*Cord}				(6) 	[remove] 'Cord'
+{Rock}				(20) 	[remove] 'Rocks to weight the warp'
+{Axe}			
+{Knife}
+[WEIGHT:100]
+[TYPE:tool]
+[TILEGFX:rc-loom]
+// Ico'n provided by Kaaven from the Urw Forums, modified
+[PRICE:60] 
+
+//.String.		"Cord"		[patch:5]	%15%		/30/	 [effort:1] [phys:hands]
+//{Fibre from *} 		#0.5#	[remove] [patchwise] 'Plant Fibres'
+//{Knife}
+//[PRICE:2]
+// Unnecessary recipe when used with Buoidda's crafts
+
+//.Hemp Rope.		"Rope"						/30/	[effort:1] [phys:hands]
+//{Fibre from Hemp}		#1#	[remove] [patchwise]
+//{Knife}
+//[PRICE:4] 
+// Unnecessary recipe when used with Buoidda's crafts
+			
+.Bag.		  			[noquality]		  	/30/  	[effort:1] [phys:hands]
+{Cloth}  			#1.0#  	[remove] 
+{*Cord}	(1) 			[remove] 'Cord'
+{Knife}
+
+[SUBMENU_END:Weaving]
+
+.String.		"Cord"		[patch:5]	%15%		/30/	 [effort:1] [phys:hands]
+{Fibre from *} 		#0.5#	[remove] [patchwise] 'Plant Fibres'
+{Knife}
+[PRICE:2]
+
+.Hemp Rope.		"Rope"						/30/	[effort:1] [phys:hands]
+{Fibre from Hemp}		#1#	[remove] [patchwise]
+{Knife}
+[PRICE:4] 
+			
+.Bag.		  			[noquality]		  	/30/  	[effort:1] [phys:hands]
+{Cloth}  			#1.0#  	[remove] 
+{*Cord}	(1) 			[remove] 'Cord'
+{Knife}
+
+.Untie Loop Snare.	"Cord"						/5/ 	[effort:1] [phys:hands]
+{Loop snare}	(1)			[remove] [name:Cord]
+
+[SUBMENU_START:Cloth Garments]
+
+.Nettle apron.			/60/	[effort:1] [phys:hands] 
+{*Yarn}	(1) 	'Yarn' [remove]
+{Nettle *}  	'Nettle Cloth'	#4.0# 	[remove]
+{Knife} <Small knife>		'A knife good for fine work'
+[PRICE:40] 
+
+.Nettle cloak.			/60/	[effort:1] [phys:hands]
+{*Yarn}  	(1) 'Yarn'	[remove]
+{Nettle *}  'Nettle Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:24] 
+
+.Nettle cowl.			/20/	[effort:1] [phys:hands] 
+{*Yarn}  	(1) 'Yarn'	[remove]
+{Nettle *}  'Nettle Cloth'		#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:8] 
+
+.Nettle shirt.			/75/	[effort:1] [phys:hands] %-15%
+{*Yarn}  	(2) 'Yarn'	[remove]
+{Nettle *}  'Nettle Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:56] 
+
+.Nettle trousers.		/100/	[effort:1] [phys:hands] %-15%
+{*Yarn}	(2) 	'Yarn' [remove]
+{Nettle *}  'Nettle Cloth'		#4.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:56] 
+
+.Nettle tunic.			/120/	[effort:1] [phys:hands]
+{*Yarn}  	(2) 'Yarn'	[remove]
+{Nettle *}  'Nettle Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:76] 
+
+.Linen apron.			/60/	[effort:1] [phys:hands]
+{*Yarn}	(1) 	'Yarn' [remove]
+{Linen *}  'Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:44] 
+
+.Linen cowl.			/20/	[effort:1] [phys:hands]
+{*Yarn}  	(1) 'Yarn'	[remove]
+{Linen *}  'Linen Cloth'		#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:8] 
+
+.Linen dress.			/120/	[effort:1] [phys:hands]
+{*Yarn}	(4) 	[remove] 'Yarn'
+{Linen *}  'Linen Cloth'		#5.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:60] 
+
+.Linen footrags.		/20/	[effort:1] [phys:hands,one-armed]	
+{Linen *}  'Linen Cloth'		#.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:4] 
+
+.Linen shirt.			/75/	[effort:1] [phys:hands]	%-15%
+{*Yarn}  	(2) 	[remove] 'Yarn'
+{Linen *}  'Linen Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:60] 
+
+.Linen trousers.		/100/	[effort:1] [phys:hands]	%-15%
+{*Yarn}	(2) 	[remove] 'Yarn'
+{Linen *}  'Linen Cloth'		#4.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:60] 
+
+.Linen tunic.			/120/	[effort:1] [phys:hands]
+{*Yarn}  	(2) 	[remove] 'Yarn'
+{Linen *}  'Linen Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:80] 
+
+.Linen undergarment.		/150/	[effort:1] [phys:hands]	%-30%
+{*Yarn}  	(4) 	[remove] 'Yarn'
+{Linen *}  'Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:72]
+ 
+.Linen undershirt.		/80/	[effort:1] [phys:hands]	%-30%
+{*Yarn}	(3) 	[remove] 'Yarn'
+{Linen *}  'Linen Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:40] 
+
+.Linen veil.			/30/	[effort:1] [phys:hands]
+{*Yarn}  	(2) 	[remove] 'Yarn'
+{Linen *}  'Linen Cloth'		#.5# 	[remove]
+{Knife} <Small knife>	'A knife good for fine work'
+[PRICE:8] 
+
+.Linen handwraps.  "Linen footrags"		/20/	[effort:1] [phys:hands,one-armed]	
+{Linen *}  'Linen Cloth'		#.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:4]
+[TYPE:armour]
+[WEIGHT:0.2] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hand]
+[TILEGFX:ar-footrags]  
+
+[SUBMENU_END:Cloth Garments]
+
+[SUBMENU_START:Woollen Garments]
+
+.Woollen apron.			/75/	[effort:1] [phys:hands]
+{*Yarn}	(1) 	'Yarn' [remove]
+{Woollen *}  'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:44]
+
+.Woollen cloak.			/90/	[effort:1] [phys:hands]
+{*Yarn}  	(1) 	[remove] 'Yarn'
+{Woollen *}  'Woollen Cloth'			#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:28]
+
+.Woollen cowl.			/25/	[effort:1] [phys:hands]
+{*Yarn}  	(1) 	[remove] 'Yarn'
+{Woollen *}  'Woollen Cloth'			#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:8]
+
+.Woollen dress.			/180/	[effort:1] [phys:hands]
+{*Yarn}	(4) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:64]
+
+.Woollen footrags.		/25/	[effort:1] [phys:hands,one-armed]	
+{Woollen *}  	'Woollen Cloth'		#.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:4]
+
+.Woollen leggings.		/120/	[effort:1] [phys:hands] %-15%
+{*Yarn}	(1) 	'Yarn' [remove] 
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:48]
+
+.Woollen mittens.		/25/	[effort:1] [phys:hands]
+{*Yarn}  	(1) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:8]
+
+.Woollen overcoat.		/90/	[effort:1] [phys:hands]
+{*Yarn}  	(1) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:78]
+
+.Woollen shirt.			/75/	[effort:1] [phys:hands]	%-15%
+{*Yarn}  	(2) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:64]
+
+.Woollen socks.			/25/	[effort:1] [phys:hands]	%-15%
+{*Yarn}  	(1) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:8]
+
+.Woollen trousers.		/120/	[effort:1] [phys:hands]	%-15%
+{*Yarn}	(2) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#7# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:64]
+
+.Woollen tunic.			/100/	[effort:1] [phys:hands]
+{*Yarn}  	(2) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#8# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:84]
+	
+.Woollen undergarment.		/180/	[effort:1] [phys:hands]	%-30%
+{*Yarn}  	(4) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:80]
+
+.Woollen undershirt.		/120/	[effort:1] [phys:hands]	%-30%
+{*Yarn}	(4) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:44]
+
+.Woollen veil.			/45/	[effort:1] [phys:hands]
+{*Yarn}  	(2) 	[remove] 'Yarn'
+{Woollen *}  	'Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:8]
+
+[SUBMENU_END:Woollen Garments]
+
+
+//[SUBMENU_START:Testing]
+//.Thread from Nettle. (10) "cord" [noquality] /1/
+//.Woodsman's axe. %100% /1/
+//.Pot. /1/ [noquality]
+//.Wet Retted Nettles. (10) "hemp" [noquality] /1/
+//
+//[SUBMENU_END:Testing]

@@ -1,0 +1,550 @@
+// Part of Buoidda's crafts 1.5+
+// Edited the whetstone to make it that you can grand one stone against the other
+
+[SUBMENU_START:lumber]
+
+.Axe haft. "Hunting horn" [effort:2] [phys:arms,hands,stance]	*TIMBERCRAFT* %10% |-2| /30/ [patch:4]
+{Split trunk}	 	[remove] [patchwise]	'Split birch trunk'
+{Axe}<Carving axe>		 [noquality]
+{Knife}<Small knife>
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-axehaft]
+
+[SUBMENU_END:lumber]
+
+[SUBMENU_START:Toolmaking]
+
+.Small knife. [effort:1] [phys:arms,hands] *CARPENTRY*  /60/
+{Iron small knife blade} [remove]
+{Branch}		 [remove] [noquality]	'+for a handle'
+{Knife} <Small knife>		  [noquality]	'+for shaping the handle'
+{Whetstone}			  [noquality]	'+for final sharpening'
+
+.Broad knife. [effort:1] [phys:arms,hands] *CARPENTRY*  /2h/
+{Iron large knife blade} [remove]
+{Branch}		 [remove] [noquality]	'+for a handle'
+{Knife} <Small knife>		  [noquality]	'+for shaping the handle'
+{Whetstone}			  [noquality]	'+for final sharpening'
+
+.Handaxe.			[effort:1] [phys:arms,hands]		*CARPENTRY*	/3h/
+.Carving axe.			[effort:1] [phys:arms,hands]		*CARPENTRY*	/3h/
+{*small axehead}	[remove]		'Small axehead'
+{*Axe haft}		[remove]		'Axe haft'
+//{*antler}	#0.2#	[remove] [noquality]	'antler for a wedge'
+{Knife} <Small knife>				'+for fitting the axehead'
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+.Woodsman's axe.		[effort:1] [phys:arms,hands]		*CARPENTRY*	/4h/
+.Broad axe.			[effort:1] [phys:arms,hands]		*CARPENTRY*	/4h/
+.Splitting axe.			[effort:1] [phys:arms,hands]		*CARPENTRY*	/4h/
+{*large axehead}	[remove]		'Large axehead'
+{Axe haft}		[remove]
+//{*antler}	#0.2#	[remove] [noquality]	'antler for a wedge'
+{Knife} <Small knife>				'+for fitting the axehead'
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+.Sickle.			[effort:1] [phys:arms,hands]		*CARPENTRY*	/3h/
+{Iron sickle blade}	[remove]
+{Branch}		[remove] [noquality]	'+for a handle'
+{Knife}				 [noquality]
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+.Shovel.			[effort:1] [phys:arms,hands]		*CARPENTRY*	/1h/
+{Iron shovel blade}	[remove]
+{Board}			[remove] 		'Birch board for handle material'
+{Axe}  				 [noquality]
+{Knife} <Small knife>
+
+.Stone hammer. "Mace" [effort:2] [phys:arms,hands]	*CARPENTRY* %-30%	/6h/
+{Stone}			[remove] [noquality]		'+for head'
+{Stone}				 [noquality]		'+for grinding'
+{Rock}				 [noquality]		'+for knapping'
+{Pitch glue}		[remove] [noquality]		
+{Fire}				 [noquality]		'+to apply glue'
+{Rope}			[remove]		
+{Axe haft}		[remove]
+[BLUNT_ATTACK:5]
+[EDGE_ATTACK:-1]
+[POINT_ATTACK:-1]
+[AD_CLASS:1/0]
+[MATERIAL:stone]
+[WEIGHT:3]
+[PRICE:5]
+[TILEGFX:bc-hammer]
+
+.Iron hammer. "Mace" [effort:3] [phys:arms,hands,stance]	*TIMBERCRAFT*	/8h/
+{*iron*}	#2#	[remove]			'Iron for the head'
+{*forge*}  			 [noquality]		'Forge or furnace'
+{Charcoal} (6) 		[remove] [noquality]
+{Bellows}
+{*anvil*} 			 [noquality] 		'Anvil nearby'
+{*hammer}      			 [noquality]		'Hammer'
+{Wooden tub of water}		 [noquality] 		'Tub of water for quenching'
+{Axe haft}		[remove]
+[BLUNT_ATTACK:6]
+[EDGE_ATTACK:-1]
+[POINT_ATTACK:-1]
+[AD_CLASS:1/0]
+[MATERIAL:iron]
+[WEIGHT:3]
+[PRICE:20]
+[TILEGFX:bc-hammer]
+
+.Bellows. "Hunting horn"	[effort:2] [phys:arms,hands]		*CARPENTRY*	/4h/
+{Board}		(4)	[remove]
+{Slender trunk}		[remove] [noquality]
+{Leather}	#4#	[remove]
+{Axe}<Carving axe>		 [noquality]
+{Knife}<Small knife>
+[MATERIAL:wood]
+[WEIGHT:70]
+[PRICE:20]
+[TILEGFX:bc-bellows]
+
+.Grind an anvil stone. "Hunting horn"	[effort:2] [phys:stance,arms,hands]	*COMMON*	/8h/ [noquality]
+{[TERRAIN:barren]}				'Barren terrain'
+//{[NEARBY_TILE:Big_rock]}			'Big rock'
+[NAME:Anvil stone]
+[MATERIAL:stone]
+[WEIGHT:120]
+[PRICE:0]
+[TILEGFX:bc-anvil]
+
+.Grind a whetstone. "Hunting horn"	[effort:2] [phys:hands]	*COMMON*			/2h/ [noquality]
+{Stone}			[remove]		'Stone'
+{stone}				[noquality]	'+For grinding'
+[NAME:Whetstone]
+[MATERIAL:stone]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-whetstone]
+
+.Dip net. "Fishing rod" [effort:0] [phys:hands,one-armed] *CARPENTRY* /2h/
+{Slender trunk}		[remove] [noquality]
+{Birch root}	(2)	[remove] [noquality]
+{Cloth}		#4#	[remove]			'cloth, fur or leather'
+{*Cord}		(1)	[remove] [patchwise]		'Cord'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[WEIGHT:8]
+[PRICE:0]
+[TILEGFX:bc-dipnet]
+
+[SUBMENU_END:Toolmaking]
+
+[SUBMENU_START:Ironworking]
+
+.Scoop lake ore. "Hunting Horn" [effort:3] [phys:arms,hands,stance] 	*COMMON*	/20/ [noquality] [patch]
+{[TERRAIN:lake]}					'Lake'  
+{[NEARBY_TILE:water]}					'Deep water'
+{Sesta}							'+for trying the bottom'
+{Dip net}						'+for scooping ore'
+[NAME:ore piece]
+[MATERIAL:stone]
+[WEIGHT:1.2]
+[PRICE:0]
+[TILEGFX:bc-orepiece]
+// Can't force deep water.
+
+.Harvest bog ore. "Hunting Horn" [effort:2] [phys:arms,hands,stance] 	*COMMON*	/40/ [noquality] [patch]
+{[TERRAIN:pine_mire spruce_mire open_mire]}		'Mire'  
+{[NEARBY_TILE:mountain]}				'near a mountain (Be Zoomed Out)'
+{Cutting weapon}					'Something to cut peat layer'
+{Shovel}
+[NAME:ore piece]
+[MATERIAL:stone]
+[WEIGHT:1.2]
+[PRICE:0]
+[TILEGFX:bc-orepiece]
+// Shouldn't be able to do when ground is frozen. Needs to be done on zoomed-out map.
+
+.Roast ore. 	(8) 	"Hunting horn" *COMMON* /1/ \3h\ [noquality] [patch]
+{Ore piece}	(8)  	[remove] [patchwise] [ground]	'Iron ore'
+{Firewood} 	(8) 	 	 [patchwise] [ground]	'+to pile with ore'
+{Firewood} 	(8) 	 	 [patchwise] [ground]	'(You need to light them on fire)'
+[NAME:Roasted ore piece]
+[MATERIAL:stone]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-orepiece]
+// To be lit
+
+.Smelt ore into iron. "Hunting horn" [effort:2] [phys:arms,hands,stance]	*TIMBERCRAFT* %-30% -M-	/8h/
+{Bloomery*}			 [noquality] [ground]	'Bloomery furnace'
+{Fire}				 [noquality]
+{Roasted ore*}	(8)  	[remove] [noquality] [ground]	'Roasted iron ore'
+{Charcoal} 	(16) 	[remove] [noquality] [ground]	'+to mix with ore'
+{Bellows}						'+for keeping the heat up'
+{Shovel}	 		 [noquality]		'+for tending the process'
+[NAME:Iron bloom]
+[MATERIAL:iron]
+[WEIGHT:2]
+[PRICE:10]
+[TILEGFX:bc-ironbloom]
+
+.Wrought iron billet. (3) "Hunting Horn" [effort:4] [phys:arms,hands,stance] *TIMBERCRAFT* %10% /4h/ -W-
+{*Iron*}	#2#	[remove]			'Iron to work with'
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} 	(8) 	[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}						'Hammer'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:5]
+[TILEGFX:bc-billet]
+
+.Steel billet. "Hunting Horn" 	[effort:3] [phys:arms,hands,stance]	*TIMBERCRAFT*		/8h/ -S-
+{*billet}		[remove] [noquality]		'Billet to carburize' [NAME:Steel %s] [NAMING:Last word]
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} 	(8) 	[remove] [noquality] [ground]
+{Bellows}			 [noquality]
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:10]
+[TILEGFX:bc-billet]
+
+.Salvage iron from an axe. "Hunting Horn"	[effort:1] [phys:arms]	*COMMON* %60%	/30/
+{*axe}	#0.5#		[remove] 			'iron axe'
+{*forge*}		 	 [noquality] [ground]	'Forge or furnace'
+{Charcoal} 	(2) 	[remove] [noquality] [ground]
+{*anvil*}   			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 [noquality] 		'Hammer'
+[NAME:Iron billet]
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:5]
+[TILEGFX:bc-billet]
+
+.Salvage steel from a sword. "Hunting Horn"	[effort:1] [phys:arms]	*COMMON* %60%	/15/
+{*sword}	#0.5#	[remove] 			'sword steel'
+{Fire}				 [noquality]		'+to anneal the metal'
+{*anvil*}   			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 [noquality] 		'Hammer'
+[NAME:Steel billet]
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:10]
+[TILEGFX:bc-billet]
+
+.Salvage steel from a scimitar. "Hunting Horn"	[effort:1] [phys:arms]	*COMMON* %20%  /15/
+{*scimitar}	#0.5#	[remove] 			'sword steel'
+{Fire}				 [noquality]		'+to anneal the metal'
+{*anvil*}   			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 [noquality] 		'Hammer'
+[NAME:Steel billet]
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:10]
+[TILEGFX:bc-billet]
+
+.Build a simple stone forge. "Hunting horn" [effort:3] [phys:arms,hands,stance]	*TIMBERCRAFT* [noquality] /1h/
+{Shovel}
+{Stone}		(10)	[remove]	     [ground]
+{Rock}		(10)	[remove]	     [ground]
+[NAME:Stone forge]
+[MATERIAL:stone]
+[WEIGHT:10000]
+[PRICE:0]
+[TILEGFX:bc-forge]
+// Light a fire and see what happens!
+
+
+.Build a bloomery furnace. "Hunting horn" [effort:3] [phys:arms,hands,stance]	*TIMBERCRAFT* [noquality] /2h/ \3h\
+{Shovel}
+{Stone}		(10)	[remove]	     [ground]
+{Rock}		(10)	[remove]	     [ground]
+{Clay lump}	(30)	[remove]	     [ground]	'Clay for making insulation'
+{Branch}	(10)
+{Branch}	(10)					'(Light a fire to dry it)'
+[NAME:Bloomery furnace (forge)]
+[MATERIAL:stone]
+[WEIGHT:10000]
+[PRICE:0]
+[TILEGFX:bc-bloomery]
+// Light a fire to dry the clay
+
+.Assign a fireplace as a forge. "Hunting horn" [noquality] /1/ [ground]
+{[NEARBY_TILE:Fireplace]}	'(Push token into the fireplace)'
+[NAME:Forge token]
+[MATERIAL:stone]
+[WEIGHT:1000]
+[PRICE:0]
+[TILEGFX:bc-invisible]
+// To be moved to a fireplace square
+
+[SUBMENU_END:Ironworking]
+
+[SUBMENU_START:Forging]
+
+.Iron arrowhead.  (10)  "Hunting Horn" [effort:2] [phys:arms,hands,stance] *CARPENTRY*	/4h/
+{*billet}  		[remove] 	    		'Iron or steel billet'
+{Fire}		 		 [noquality]
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.03]
+[PRICE:0]
+[TILEGFX:bc-arrowhead]
+
+.Iron broadhead.  (5)  "Hunting Horn" [effort:2] [phys:arms,hands,stance] *CARPENTRY* 	/4h/
+{*billet}  		[remove] 	    		'Iron or steel billet'
+{Fire}		 		 [noquality]
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.07]
+[PRICE:0]
+[TILEGFX:bc-broadhead]
+
+.Forked iron arrowhead. (5) "Hunting horn" [effort:2] [phys:arms,hands,stance]   *CARPENTRY*  %10% /4h/
+{*billet}  		[remove] 	    		'Iron or steel billet'
+{Fire}		 		 [noquality]
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT: 0.05]
+[NAME:Forked arrowhead]
+[PRICE:0]
+[TILEGFX:bc-forkbahd]
+
+.Iron pot.    "Pot" 		[effort:3] [phys:arms,hands,stance] 	*CARPENTRY*	/3h/
+{*iron billet}	(5)	[remove] [noquality]		'Iron billet' 
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} 	(10) 	[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{Iron hammer}
+
+.Iron fishhook.  (5) "Hunting Horn"  [effort:1] [phys:arms,hands,stance] 	*CARPENTRY*	/2h/
+{*billet} 		[remove]			'Iron or steel billet'
+{Fire}		 		 [noquality]
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.05]
+[PRICE:0]
+[TILEGFX:bc-hook]
+
+.Iron shovel blade.    "Shovel"	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/3h/
+{*billet}	(4) 	[remove]			'Iron or steel billet' 
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (8) 		[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{Iron hammer}
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[PRICE:0]
+[WEIGHT:2]
+[TILEGFX:bc-shovelbl]
+
+.Iron small knife blade.    "Hunting Horn" [effort:2] [phys:arms,hands,stance] *CARPENTRY*	/3h/
+{*billet}  		[remove] 			'Good billet for the edge'
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (3) 		[remove] [noquality]
+{Bellows}			 [noquality]
+{*anvil*}			 [noquality]		'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] 		'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.2]
+[PRICE:0]
+[TILEGFX:bc-knifebla]
+// A lot of noquality tags to allow making of masterwork small knife
+// which is required to achieve masterwork hammer and perfect bellows
+// with which all other masterwork tools can be crafted
+
+.Iron large knife blade.    "Hunting Horn" [effort:3] [phys:arms,hands,stance] *CARPENTRY*	/4h/
+{*billet}  		[remove]			'Good billet for the edge'
+{*billet}  		[remove] [noquality]		'Second billet for shape'
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.3]
+[PRICE:0]
+[TILEGFX:bc-knifebla]
+
+.Iron sickle blade.    "Hunting Horn" [effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/3h/
+{*billet}	(2)	[remove]			'Iron or steel billet' 
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:0]
+[TILEGFX:bc-sicklebla]
+
+.Iron small axehead.   "Hunting Horn" [effort:4] [phys:arms,hands,stance]	*TIMBERCRAFT*	/6h/
+{*Steel billet}	(1)	[remove]			'Steel billet for the edge' 
+{*billet}	(4)	[remove] [noquality]		'More billets for shape' 
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{Iron hammer}
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-axehead]
+
+.Iron large axehead.   "Hunting Horn" [effort:5] [phys:arms,hands,stance]	*TIMBERCRAFT*	/8h/
+{*Steel billet}(2)	[remove]			'Steel billet for the edge' 
+{*billet}     (8)	[remove] [noquality]  		'More billets for shape' 
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (20) 	[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{Iron hammer}
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:4]
+[PRICE:0]
+[TILEGFX:bc-axehead]
+
+.Iron spearhead.    "Hunting Horn"  	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/6h/  
+{*billet}  		[remove]			'Good billet for the edges'
+{*billet}  		[remove] [noquality]		'Second billet for shape'
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{*hammer}			 			'Hammer'
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-spearhead]
+
+.Shortsword blade.   "Hunting Horn" [effort:4] [phys:arms,hands,stance] *TIMBERCRAFT*	/10h/
+{*Steel billet}  (5) 	[remove]			'Steel billet'
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (10) 	[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{Iron hammer}
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:1.2]
+[PRICE:0]
+[TILEGFX:bc-swordbla]
+
+.Iron battleaxe-head.   "Hunting Horn" [effort:4] [phys:arms,hands,stance] *TIMBERCRAFT*	/8h/
+{*Steel billet}  (2) 	[remove]			'Steel billet'
+{*billet}     (2)	[remove] [noquality]  		'More billets for shape' 
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (8) 		[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{Iron hammer}
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-axehead]
+
+.Iron pommel.   "Hunting Horn" 	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/2h/
+{*billet}  		[remove] [noquality]		'Iron or steel billet'
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} (2) 		[remove] [noquality] [ground]
+{Bellows}
+{*anvil*}			 [noquality] [ground]	'Anvil nearby'
+{Iron hammer}
+{Wooden tub of water}		 [noquality] [ground]	'Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:0]
+[TILEGFX:bc-pommel]
+
+[SUBMENU_END:Forging]
+
+[SUBMENU_START:weapon]
+
+.Northern knife. [effort:1] [phys:arms,hands] *CARPENTRY* /6h/
+{Iron large knife blade} [remove]
+{Knife handle pieces}	 [remove]
+{*antler}	#1#		[remove] [noquality]	'antler for sheath'
+{cured*skin}	#1#		[remove] [noquality]	'cured skin'					'
+{Knife}<Small knife>
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+.Northern spear. 	[effort:1] [phys:arms,hands]		*CARPENTRY* %-10%	/5h/
+{Iron spearhead}	[remove]
+{Staff} 		[remove]
+{Birch root}		[remove] [noquality]	'Root for basket loop'
+{Leather}	#0.2#	[remove] 		'leather for basket'
+{Knife}<Small knife>
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+.Spear. 		[effort:1] [phys:arms,hands]		*CARPENTRY*	/3h/
+{Iron spearhead}	[remove]
+{Staff} 		[remove]
+{Knife}
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+.Short spear. "Spear"	[effort:1] [phys:arms,hands]		*CARPENTRY*	/3h/
+{Iron spearhead}	[remove]
+{Staff} 		[remove]
+{Knife}
+{Whetstone}			 [noquality]	'+for final sharpening'
+[AD_CLASS:3/1]
+[1HPENALTY:0]
+[MATERIAL:iron]
+[WEIGHT:3]
+// inherited accuracy 4 from spear, so better than wooden javelin (1)!
+
+.Shortsword. 		[effort:1] [phys:arms,hands]		*CARPENTRY*	/8h/
+{Shortsword blade}	[remove]
+{Wooden stake} 		[remove] [noquality]	'+for a handle'
+{*pommel} 		[remove] [noquality]	'Pommel'
+{Leather}	#0.2# 	[remove] [noquality]
+{Iron hammer} 			 [noquality]	'+for fixing the pommel'
+{Knife}				 [noquality]
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+.Battleaxe. 		[effort:1] [phys:arms,hands]		*CARPENTRY*	/3h/
+{*Battleaxe-head}	[remove]		'Battleaxe-head'
+{Axe haft}		[remove]
+{*antler}	#0.2#	[remove] [noquality]	'antler for a wedge'
+{Axe}				 [noquality]
+{Knife} <Small knife>
+{Whetstone}			 [noquality]	'+for final sharpening'
+
+[SUBMENU_END:weapon]
+
+[SUBMENU_START:Fletching]
+
+.Broadhead arrow.	[effort:1] [phys:hands,one-armed]   	*CARPENTRY*	/30/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{Iron broadhead}	[remove] [patchwise]
+{Feather} (3)		[remove] [patchwise] [noquality]
+{Fibre from*} 		[remove] [patchwise]			'Some fibre'
+{Knife} <Small knife>
+{Whetstone}			 [noquality]		'+for final sharpening'
+
+[SUBMENU_END:Fletching]
+
+[SUBMENU_START:Boneworking]
+
+.Knife handle pieces. "Hunting horn" [effort:1] [phys:hands]   	*CARPENTRY*  %-10%  /5h/
+{*reindeer antler} 	#0.5#	[remove] [noquality]	'reindeer antler'
+{Leather}		#0.1#	[remove] [noquality]	'leather in between'
+{Axe}					 [noquality]
+{Knife}<Small knife>
+[TILEGFX:bc-antpieces]
+
+
+[SUBMENU_END:Boneworking]

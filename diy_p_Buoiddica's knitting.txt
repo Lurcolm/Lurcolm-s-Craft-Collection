@@ -1,0 +1,147 @@
+// Part of Buoidda's crafts 1.5+
+// Based on parts of Rain's Clothing v3
+
+[SUBMENU_START:Knitting]
+
+.Shear a sheep. (50)	"Hunting horn"	[phys:stance,arms,hands] /30/ *HIDEWORKING* [noquality]
+{[NEARBY_TILE:ground]} 			'During midsummer' 
+{[NEARBY_TILE:ground]} 			'shear each sheep once'
+{Knife}					'+for shearing'
+[NAME:Greasy wool]
+[WEIGHT:0.1]
+[TILEGFX:bc-fibre]
+
+.Carding. "Hunting horn"	[phys:stance,arms,hands] /5/ *HIDEWORKING* [patch] [noquality]
+{Greasy wool}		[remove] [patchwise] 
+{*comb}	<Antler Comb>				'Comb for carding'
+[NAME:Fibre from wool]
+[WEIGHT:0.1]
+[TILEGFX:bc-fibre]
+
+.Spin Yarn. 		"Cord" 	[noquality]	/1h/ 	[patch:5]	[effort:1] 	[phys:hands,one-armed]	
+{*ibre from *} 		#0.5#	[remove] [patchwise]  [name:%s Yarn] [naming:last word] 'Fibre'
+{Spindle and Distaff}
+[TILEGFX:rc-yarn]
+// From Rain's Clothing v3
+// Icon provided by Kaaven from the Urw Forums, modified
+// 'Plant Fibre' -> 'Fibre'
+[PRICE:5]
+
+.Knit Woollen apron.	"Woollen apron"		/5h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen apron]
+[PRICE:44]
+
+.Knit Woollen cloak.		"Woollen cloak"	/9h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#9# 	[remove]
+[NAME:Woollen cloak]
+[PRICE:28]
+
+.Knit Woollen cowl.		"Woollen cowl"	/2h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#1.5# 	[remove]
+[NAME:Woollen cowl]
+[PRICE:8]
+
+.Knit Woollen dress.		"Woollen dress"	/6h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#6# 	[remove]
+[NAME:Woollen dress]
+[PRICE:64]
+
+.Knit Woollen footrags.	"Woollen footrags"	/90/	[effort:1] [phys:hands,one-armed]
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen footrags]
+[PRICE:4]
+
+.Knit Woollen leggings.	"Woollen leggings"	/5h/	[effort:1] [phys:hands] %-15%
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen leggings]
+[PRICE:48]
+
+.Knit Woollen mittens.	"Woollen mittens"	/2h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen mittens]
+[PRICE:8]
+
+.Knit Woollen overcoat.	"Woollen overcoat"	/9h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#9# 	[remove]
+[NAME:Woollen overcoat]
+[PRICE:78]
+
+.Knit Woollen shirt.		"Woollen shirt"	/5h/	[effort:1] [phys:hands]	%-15%
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen shirt]
+[PRICE:64]
+
+.Knit Woollen socks.		"Woollen socks"	/2h/	[effort:1] [phys:hands]	%-15%
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen socks]
+[PRICE:8]
+
+.Knit Woollen trousers.	"Woollen trousers"	/7h/	[effort:1] [phys:hands]	%-15%
+{Knitting needles}
+{Wool yarn}  		#7# 	[remove]
+[NAME:Woollen trousers]
+[PRICE:64]
+
+.Knit Woollen tunic.		"Woollen tunic"	/8h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#8# 	[remove]
+[NAME:Woollen tunic]
+[PRICE:84]
+	
+.Knit Woollen undergarment.	"Woollen undergarment"	/6h/	[effort:1] [phys:hands]	%-30%
+{Knitting needles}
+{Wool yarn}  		#6# 	[remove]
+[NAME:Woollen undergarment]
+[PRICE:80]
+
+.Knit Woollen undershirt.	"Woollen undershirt"	/5h/	[effort:1] [phys:hands]	%-30%
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen undershirt]
+[PRICE:44]
+
+.Knit Woollen veil.		"Woollen veil"	/2h/	[effort:1] [phys:hands]
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen veil]
+[PRICE:8]
+
+.Unravel woollen cloth into yarn. "Cord" 	[noquality]	/15/ 	[patch]	[effort:1] 	[phys:hands,one-armed]
+{Woollen *} 		#0.5#	[remove] [patchwise]  'Woollen cloth'
+[NAME:Wool yarn]
+[TILEGFX:rc-yarn]
+// Icon provided by Kaaven from the Urw Forums, modified
+[PRICE:5]
+
+.Spindle and Distaff.	"Wooden stake"	*CARPENTRY*	%25%		/45/	[effort:1] [phys:hands]
+{Staff}			(1) 	[remove] '+to hold the fibre'
+{Rock}			(1) 	[remove] '+for a spindle'
+{*Cord}	(1) 	[remove]			'Cord'
+{Knife}
+[WEIGHT:2]
+[TYPE:tool]
+[PRICE:10] 
+[TILEGFX:rc-distaff]
+// Rain's Clothing v3, slightly modified
+// Icon provided by Kaaven from the Urw Forums
+
+.Knitting needles.	"Branch"	/2h/	[phys:hands] *COMMON* [noquality]
+{Branch}	(4) 	[remove]
+{Knife} <Small knife>
+[WEIGHT:0.2]
+[PRICE:0.1]
+[TILEGFX:bc-kneedles]
+
+[SUBMENU_END:Knitting]
+

@@ -1,0 +1,91 @@
+// This biy_glossary file has come with Buoidda's crafts mod 1.5+
+// No original code is removed, just commented out
+
+[SUBMENU_START:building]
+
+.North-west corner. [effort:4] *BUILDING* [GFX_X:0] [GFX_Y:0]	|+2|			/320/
+.Northern wall.	    [effort:4] *BUILDING* [GFX_X:1] [GFX_Y:0]	|+2|			/320/
+.North-east corner. [effort:4] *BUILDING* [GFX_X:3] [GFX_Y:0]  |+2|                    /320/
+.Western wall. 	    [effort:4] *BUILDING* [GFX_X:0] [GFX_Y:1]	|+2|			/320/
+{Log} (6) [remove] [ground]
+{Axe} <Carving axe> '+for carving the logs'
+{Axe} <Broad axe> '+for finishing the walls'
+
+.Inside of a building. [effort:3] *BUILDING* [GFX_X:2] [GFX_Y:1] "Ceiling and floor"      |+2|    /180/
+{Board} 		(6) [remove] [ground]
+{Slender trunk}   	(2) [remove] [ground] 
+{Axe} 
+
+.Eastern wall. 	    [effort:4] *BUILDING* [GFX_X:3] [GFX_Y:1]  |+2|                    /320/
+.South-west corner. [effort:4] *BUILDING* [GFX_X:0] [GFX_Y:2] 	|+2|			/320/
+.Southern wall.     [effort:4] *BUILDING* [GFX_X:2] [GFX_Y:2]  |+2|                    /320/
+.South-east corner. [effort:4] *BUILDING* [GFX_X:3] [GFX_Y:2]  |+2|                    /320/
+{Log} (6) [remove] [ground]
+{Axe} <Carving axe> '+for carving the logs'
+{Axe} <Broad axe> '+for finishing the walls'
+
+.Shutter. [effort:4] "Wall with a shutter"  -S-             *BUILDING* [GFX_X:2] [GFX_Y:0]  /320/    |+2| 
+{Log}   (6) [remove] [ground]
+{Board} (2) [remove] [ground]
+{Axe} <Carving axe> '+for carving the logs'
+{Axe} <Broad axe> '+for finishing the walls'
+
+.Fireplace. -F- [effort:3] [phys:arms,stance,one-armed] *BUILDING*      [GFX_X:1] [GFX_Y:1]     /240/                   %50%            [indoors]   
+{Stone} (35) [ground] [remove]
+
+.Door.  -D- [effort:3] *BUILDING* [GFX_X:1] [GFX_Y:2]      /120/                       %30%
+{Board} (8) [remove] [ground]
+{Axe}
+
+
+.Bench.	-B- [effort:3] *BUILDING*	[GFX_X:4] [GFX_Y:2]	 /90/			%50%		[indoors]   
+{Board} (2) [remove] [ground]
+{Axe}
+
+.Table.	-T- [effort:3] *BUILDING*	[GFX_X:6] [GFX_Y:2]	/120/			%30%		[indoors]
+{Board} (10) [remove] [ground]
+{Axe}
+
+.Sleeping bunk. -K- [effort:3] *BUILDING*	[GFX_X:8] [GFX_Y:2]	/45/			%60%		[indoors]
+{Board} (6) [remove] [ground]
+{Axe}
+
+[SUBMENU_END:building]
+
+
+
+
+[SUBMENU_START:kota]
+
+.Framework. [effort:3]	*BUILDING* 	 	-F-	/30/			%20%	|-1|	 [GFX_X:2] [GFX_Y:1]
+{Slender trunk}(8) [remove] [ground]
+
+.North-west corner of a kota. [effort:2]  *BUILDING*  [GFX_X:5] [GFX_Y:0]	|+1| /15/              %10%  
+.Northern wall of a kota. [effort:2]      *BUILDING*  [GFX_X:6] [GFX_Y:0]	|+1|	
+.North-east corner of a kota. [effort:2]  *BUILDING*	[GFX_X:7] [GFX_Y:0]	|+1|
+.Western wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:5] [GFX_Y:1]	|+1|
+.Inside of a kota. [effort:2] 		  *BUILDING*	[GFX_X:6] [GFX_Y:1]	|+1|
+.Eastern wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:7] [GFX_Y:1]	|+1|
+.South-west corner of a kota. [effort:2]  *BUILDING*	[GFX_X:5] [GFX_Y:2]	|+1|
+.Southern wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:6] [GFX_Y:2]	|+1|
+.South-east corner of a kota. [effort:2]  *BUILDING*	[GFX_X:7] [GFX_Y:2]	|+1|
+.Kota doorway. -D- [effort:2] *BUILDING*	[GFX_X:9] [GFX_Y:1]
+{Cover for kota} [remove] 
+{Slender trunk}  [remove] [ground]
+
+[SUBMENU_END:kota]
+
+.Shelter. [effort:2] [phys:arms,stance,one-armed] -S- *BUILDING* /30/		%30%
+{Cutting weapon} <Axe>
+{Slender trunk} (3) [remove] [ground]
+{Spruce twig} (20) [remove] [ground]
+
+.Fence.	[effort:3] -F-	 *BUILDING*
+{Wooden stake} (6) [remove] 			/20/			%70%	|-1|
+
+.Cellar. [effort:4] -C-	*BUILDING*			/180/		|+1|
+{Slender trunk} (6) [remove] [ground]
+{Board} (6) [remove] [ground]
+{Stone} (10) [remove] [ground]
+{Shovel} 
+

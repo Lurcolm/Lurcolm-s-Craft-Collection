@@ -1,0 +1,96 @@
+// Part of Buoidda's crafts 1.5+
+
+[SUBMENU_START:Hideworking]
+
+//.Kota cover from single pelt. /5/ "Fur cloak" *HIDEWORKING* %50% 
+//{Animal hide} #8# [remove] 'single hide'
+//{Knife}
+//[NAME:Fur cover]
+//[WEIGHT:8]
+//[TYPE:skin]
+//[SPOILAGE_DAYS:0]
+//[TILEGFX:it-defpelt]
+
+//.Kota cover from hide pieces. /4h/ "Fur cloak" *HIDEWORKING*
+//{Animal hide} #8# [remove] 'hide pieces'
+//{Knife}<Small knife>
+//[NAME:Fur cover]
+//[WEIGHT:8]
+//[TYPE:skin]
+//[SPOILAGE_DAYS:0]
+//[TILEGFX:it-defpelt]
+
+//.Kota cover of leather. /4h/ "Leather shirt" *HIDEWORKING*
+//{Leather} #8# [remove] 'leather pieces'
+//{Knife}<Small knife>
+//[NAME:Leather cover]
+//[WEIGHT:8]
+//[TYPE:skin]
+//[SPOILAGE_DAYS:0]
+//[TILEGFX:it-defpelt]
+
+//.Kota cover of wool. /2h/ "Woollen overcoat" *HIDEWORKING*
+//{Woollen*} #8# [remove] 'woollen cloth'
+//{Knife}<Small knife>
+//[NAME:Woollen cover]
+//[WEIGHT:8]
+//[TYPE:skin]
+//[SPOILAGE_DAYS:0]
+//[TILEGFX:it-defpelt]
+
+.Birch inner bark. "Bark" 	/15/ [noquality]
+{[NEARBY_TILE:BIRCH]} 			     +'Birch nearby'
+{Knife}
+[WEIGHT:1]
+
+//.De-hair fur cover. "Hunting horn" *HIDEWORKING* /5/ \7d\
+//{*fur cover}	#8#	[remove]		'fur cover'
+//{Water} 	#16#	[remove] [noquality]	'for soaking'
+//[NAME:De-haired skin cover]
+//[TYPE:skin]
+//[WEIGHT:8]
+//[SPOILAGE_DAYS:3]
+//[TILEGFX:it-defpelt]
+
+//.Mild tanning of skin cover. "Hunting horn" *HIDEWORKING* /30/ \1d\
+//{De-haired skin cover}			[remove]
+//{*bark-water} 	#2#			[remove] [noquality] 	'bark-water'
+//{Wooden tub of water}			[ground] [noquality]
+//[NAME:Tanning skin cover]
+//[TYPE:skin]
+//[WEIGHT:8]
+//[SPOILAGE_DAYS:3]
+//[TILEGFX:it-defpelt]
+
+//.Final tanning of skin cover. "Hunting horn" *HIDEWORKING* /45/ \1d\
+//{Tanning skin cover}		[remove]
+//{*bark-water} 	#6#		[remove] [noquality]	'bark-water'
+//{Fat}		#0.5#		[remove] [optional] [noquality]		
+//{Wooden tub of water}		[ground] [noquality]
+//[NAME:Tanned skin cover]
+//[TYPE:skin]
+//[WEIGHT:8]
+//[SPOILAGE_DAYS:5]
+//[TILEGFX:it-defpelt]
+
+//.Rinse tanned skin cover. "Hunting horn" *HIDEWORKING* /15/ \6h\
+//{Tanned skin cover}	[remove]
+//{Water} 	#8#	[remove] [noquality]	'water for soaking'
+//[NAME:Rinsed skin cover]
+//[TYPE:skin]
+//[WEIGHT:8]
+//[SPOILAGE_DAYS:0]
+//[TILEGFX:it-defpelt]
+
+//.Soften leather cover. "Hunting horn" *HIDEWORKING* /4h/
+//{Rinsed skin cover}	[remove]
+//{Workbench or working surface} DOESN'T WORK
+//{Beater}
+//[NAME:Leather cover]
+//[TYPE:skin]
+//[MATERIAL:leather]
+//[WEIGHT:8]
+//[SPOILAGE_DAYS:0]
+//[TILEGFX:it-defpelt]
+
+[SUBMENU_END:Hideworking]

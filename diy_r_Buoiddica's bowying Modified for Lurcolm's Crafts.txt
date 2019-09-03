@@ -1,0 +1,191 @@
+// Part of Buoidda's crafts 1.5+
+//Edited for Lurcolm's Craft Collection. Commented out the dried perch skin and made glue a thing.
+
+[SUBMENU_START:Bowying]
+
+.Braided bowstring. "Cord" [phys:hands] *CARPENTRY* /120/ |2|
+{Fibre from*}	#0.2# 	[remove]			'fibre' 
+{Knife}		 		 [noquality]
+[NAME:Bowstring]
+[WEIGHT:0.2]
+// Uses fibres from Boneworking but also Rain's clothing Mod v3!
+
+.Rawhide bowstring. "Cord" [phys:hands] *HIDEWORKING* %10% /60/ \1d\ |1|
+{Cured *skin}	#0.2# 	[remove]			'Cured skin'
+{Water} 			[noquality]		'+for soaking' 
+{Knife} <Small knife>
+[NAME:Bowstring]
+[WEIGHT:0.2]
+
+.Spruce bow. "Juniper bow" [effort:2] [phys:stance,arms] *COMMON*  /60/ |0|
+{Big spruce branch} 	[remove] [noquality]
+{Cutting weapon}<Knife>
+{*Cord}	 	[remove]	'Cord'
+[POINT_ATTACK:4]
+
+.Birch shortbow. "Shortbow" [effort:2] [phys:stance,arms] *CARPENTRY*  /320/ |2|
+{Split trunk} 		[remove] 			'Split birch trunk'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+{Fire} 							'+for treating the belly'
+{Bowstring}		[remove]
+[NAME:Shortbow]
+// Requires Buoidda's crafts mod!
+
+.Northern staff-bow. "Northern spear" [effort:2] [phys:stance,arms] *CARPENTRY*  /7h/ \1d\ |2|
+{Compression pine belly} [remove]
+{Birch backing}		 [remove]
+{*Glue} 		 [remove] [noquality] 	'+for attaching limbs.'
+{Birch-bark lace} 	 [remove] [noquality]	'+for protection'
+{Birch root}		 [remove] [noquality]	'+for ski-basket'
+{Leather}	#0.2#	 [remove] [noquality]	'+for basket'
+{Knife} <Small knife>
+{Bowstring}		 [remove]
+[NAME:Staff-bow]
+[BLUNT_ATTACK:-]
+[EDGE_ATTACK:-]
+[POINT_ATTACK:6]
+[AD_CLASS:0/0]
+[WEIGHT:4]
+[SKILL:bow]
+[PRICE:80]
+[TILEGFX:bc-staffbow]
+
+.Sinew-backed antler bow. "Shortbow" [effort:2] [phys:stance,arms] *CARPENTRY* %-20% /4h/ \1d\ |2|
+{Big spruce branch}	[remove] [noquality]	'+for core'
+{Antler strip}	 (2)	[remove]
+{Recurve ear} 	 (2) 	[remove]
+{Fibre from sinew} #1#  [remove]		'sinew for backing'
+{*Glue} 		[remove] [noquality] 	'glue for attaching limbs'
+{Fire}						'+For heating glue
+{Knife} <Small knife>
+{Bowstring}		[remove]
+[POINT_ATTACK:8]
+[NAME:Antler Bow]
+[TILEGFX:lcc-antbow]
+// Requires Buoidda's boneworking mod
+
+.Two-wood longbow. "Longbow" [effort:2] [phys:stance,arms] *CARPENTRY* %-10%  /6h/ \1d\ |2|
+{Compression pine belly} [remove]
+{Birch backing}		 [remove]
+{*glue} 		 [remove] [noquality] 	'glue for attaching limbs'
+{Birch-bark lace} 	 [remove] [noquality]	'+for protection'
+{Fire} 						'+for applying glue'
+{Knife} <Small knife>
+{Bowstring}		 [remove]
+[POINT_ATTACK:7]
+[PRICE:90]
+
+.Hardwood longbow. "Longbow" [effort:2] [phys:stance,arms] *CARPENTRY*  %10%	/320/ |2|
+{Hard staff}		 [remove] [noquality]	'Hardwood staff'
+{Knife}<Small knife>
+{Bowstring} 		 [remove]
+[POINT_ATTACK:7]
+[NAME:Longbow]
+
+.Recurved northern bow. "Northern Bow" [effort:2] [phys:stance,arms] *CARPENTRY* %-10% /8h/ \1d\ |2|
+{Compression pine belly} [remove]
+{Birch backing}		 [remove]
+{Recurve ear} (2) 	 [remove]
+{*glue} 		 [remove] [noquality] 	'glue for attaching limbs'
+{Birch-bark lace} 	 [remove] [noquality]	'+for protection'
+{Fire} 						'+for wrapping bark'
+{Knife} <Small knife>
+{Bowstring}		 [remove]
+[NAME:Northern bow]
+[POINT_ATTACK:9]
+[WEIGHT:3.2]
+[PRICE:176]
+[TILEGFX:wp-northbow]
+
+.Compression pine belly. "Firewood" [phys:hands] *CARPENTRY* %-10% /320/ |2|
+{Tree trunk} 		 [remove] [ground] [noquality]	'Find a leaning pine tree' 
+{Axe} <Carving axe>
+{Knife}<Small knife>
+{Fire} 							'+for heat-treating'
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-pinebelly]
+
+.Birch backing. "Firewood" [phys:hands]   *CARPENTRY* /240/  |1|
+{Split trunk} 		[remove] 			'Split birch trunk'
+{Axe} <Carving axe>
+{Knife}<Small knife>
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-birchback]
+
+.Recurve ear. "Firewood"  [phys:hands,one-armed]   *CARPENTRY* /60/  |1|
+{Branch} 	[remove] [noquality]		'Birch branch' 
+{Knife}<Northern knife>	 [noquality]		'Large knife'
+{Knife}<Small knife>				'Small knife'
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-bowear]
+
+//.Dried perch-skin. "Hunting horn" [phys:hands] *COMMON* /5/ \1d\ [patch] [noquality]
+//{Perch} 		[remove] [patchwise]
+//[TYPE:tool]
+//[MATERIAL:bone]
+//[WEIGHT:0.01]
+//[PRICE:0]
+//[TILEGFX:bc-fishskin]
+
+.Antler strip. "Firewood" [phys:hands] *CARPENTRY* %-10% /4h/ |2|
+{*antler}	[remove] [noquality]
+{Axe} <Carving axe>		 [noquality]
+{Knife}<Small knife>
+[TYPE:tool]
+[MATERIAL:antler]
+[WEIGHT:0.5]
+[TILEGFX:bc-antstrip]
+// Requires Buoidda's boneworking mod
+
+.Retiller northern bow. "Northern Bow"	*COMMON*  %100% /1/
+{Northern bow}		 [remove]
+[NAME:Northern Bow]
+[POINT_ATTACK:9]
+// To upgrade northern bows to this mod's stats
+
+.Retiller Longbow. "Longbow"	*COMMON*	%100% /1/
+{Longbow}		 [remove]
+[NAME:Longbow]
+[POINT_ATTACK:7]
+// To nerf longbows. 
+
+.Retiller Hunting Bow.	"Shortbow"	*COMMON* %100% /1/
+{hunting bow}		 [remove]
+[NAME:Hunting Bow]
+[POINT_ATTACK:8]
+[WEIGHT:4]
+[PRICE:144]
+[TILEGFX:wp-huntbow]
+//To adjust the stats of the Hunting Bow
+
+//.Retiller staff-bow. *COMMON* "Shortbow" %100% /1/
+//{Staff-bow}		 [remove]
+//[NAME:Staff-bow]
+//[BLUNT_ATTACK:-]
+//[EDGE_ATTACK:-]
+//[POINT_ATTACK:6]
+//[AD_CLASS:0/0]
+//[WEIGHT:4]
+//[SKILL:bow]
+//[PRICE:80]
+//[TILEGFX:bc-staffbow]
+// To upgrade staff-bows to this mod's stats
+
+[SUBMENU_END:Bowying]
+
+[SUBMENU_START:lumber]
+
+.Big spruce branch. "Spruce twig" [phys:hands,one-armed]   *COMMON* /10/ [noquality]
+{[NEARBY_TILE:SPRUCE]}			'Big spruce nearby'
+{Cutting weapon}
+[MATERIAL:wood]
+[WEIGHT:4]
+
+[SUBMENU_END:lumber]

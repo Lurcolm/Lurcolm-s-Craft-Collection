@@ -1,0 +1,74 @@
+// Part of Buoidda's crafts 1.5+ in Lurcolm's Crafts Collection
+
+[SUBMENU_START:Fletching]
+
+.Tipped arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*        /30/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{*Arrowhead}		[remove] [patchwise]			'Arrowhead'
+{Feather} (3)		[remove] [patchwise] [noquality]
+{Fibre from*} 		[remove] [patchwise] [noquality]	'Some fibre'
+{Knife} <Small knife>
+[NAME:Arrow]
+[WEIGHT:0.13]
+
+.Fur-fletched arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*   %-20% /25/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{*Arrowhead}		[remove] [patchwise]			'Arrowhead'
+{*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'Fur'
+{Fibre from*} 		[remove] [patchwise] [noquality]	'Some fibre'
+{Knife} <Small knife>
+[WEIGHT:0.13]
+
+.Repair arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*        /40/    [patch:5]
+{*arrow}		[remove] [patchwise]			'Arrow to reuse feathers from'
+{Arrow shaft}		[remove] [patchwise]
+{*Arrowhead}		[remove] [patchwise]			'Arrowhead'
+{Knife} <Small knife>
+[NAME:Arrow]
+[WEIGHT:0.13]
+// Be careful not to use your best arrows!
+
+.Wooden blunt arrow. "Blunt arrow" [effort:1] [phys:hands,one-armed]  *CARPENTRY*   %-15%    /35/    [patch:5]
+{Wooden stake}		[remove] [patchwise]
+{Knife}<Small knife>
+[NAME:Blunt arrow]
+
+.Birch Sapling arrow shaft. "Firewood" [phys:hands,one-armed]   *CARPENTRY*   %-40%  /15/  |-2|  [patch:5]
+{[NEARBY_TILE:BIRCH]} 			     [noquality]	+'Birch nearby' 
+{Knife}
+[NAME:Arrow shaft]
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:0.1]
+[TILEGFX:bc-shaft]
+
+.Sapling arrow shaft. "Firewood" [phys:hands,one-armed]   *CARPENTRY*   %-20%  /10/  |-2|  [patch:9]
+{[NEARBY_TILE:ROWAN]} 			     [noquality]	 +'Rowan nearby'
+{[TILE:BUSHES]} 			     [noquality]	 +'Bushes to collect saplings from'
+{Knife}
+[NAME:Arrow shaft]
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:0.1]
+[TILEGFX:bc-shaft]
+
+.Split arrow shaft. "Firewood" [effort:1] [phys:stance,arms]   *CARPENTRY*   /20/  |-1|  [patch:9]
+{Board} 	#1# 	[remove] [patchwise]
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[NAME:Arrow shaft]
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:0.1]
+[TILEGFX:bc-shaft]
+
+.Stone arrowhead. "Hunting horn" [effort:2] [phys:hands]   *CARPENTRY*  %-10% /30/ |-2|   [patch:5]
+{Stone}		#0.2# 	[remove] [patchwise] [noquality]	'+as a core'
+{Rock}  				     [noquality] 	'+as the hammerstone'
+[TYPE:tool]
+[NAME:Arrowhead]
+[MATERIAL:rock]
+[WEIGHT:0.03]
+[TILEGFX:bc-arrowhead]
+
+[SUBMENU_END:Fletching]

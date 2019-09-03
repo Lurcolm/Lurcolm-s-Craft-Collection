@@ -1,0 +1,77 @@
+// Part of Buoidda's crafts 1.5+
+
+[SUBMENU_START:meat]
+
+.Roasted marrow bone. 		*COOKERY* /1/  \5\	%20% [patch]	:148:  
+{*Bone}		[remove] [roast] [name:roasted %s] [naming:original] [patchwise] 'Bone'
+{Cutting weapon}<Northern knife>	'+to split bone'
+[COOK_WEIGHT_DIV:10]
+
+.Boiled meat and marrowbone. *COOKERY* /15/  \1h\	%20%	:148:  
+{Raw meat}	#4# 	[remove] [boil]
+{*Bone}		(2)	[remove] [boil] 'Bone'
+{Water}		#2#	[remove] [boil]
+{Seasoning}	#0.25#	[remove] [boil] [optional]
+{Cutting weapon}<Northern knife>	'+to split bone'
+[COOK_WEIGHT_DIV:2]
+
+.Dry meat soup. 		*COOKERY* /15/  \2h\	%20%	:148:  
+{Dried*cut}	#0.6# 	[remove] [boil] 'dried meat'
+{Water}		#2.5#	[remove] [boil]
+{Vegetables}	#0.5#	[remove] [boil]
+{Knife}	'+for chopping and peeling'
+{Seasoning}	#0.25#	[remove] [boil] [optional]
+
+.Blood sausage. (3)	*COOKERY*  /20/ \15\ :148: [patch:3] 
+{Washed*gut}	 		[remove] [roast] [patchwise] 'Washed gut'
+{* blood} #1#	  		[remove] [roast] [patchwise] 'Blood'
+{Flour}		#0.25#		[remove] [roast] [optional] 
+{Seasoning}	#0.2#		[remove] [roast] [optional] 
+[SPOILAGE_DAYS:7]
+[PRICE:0.5]
+
+.Blood cake. (4)	*COOKERY*  /20/ \15\ :148: [patch:3] 
+{Reindeer blood} #1#	  	[remove] [roast] [patchwise]
+{Flour}		#0.5#		[remove] [roast] [patchwise]
+{*Fat} 		#0.2#	  	[remove] [roast] [patchwise] [optional] 'fat'
+{Seasoning}	#0.2#		[remove] [roast] [patchwise] [optional] 
+[SPOILAGE_DAYS:5]
+[PRICE:0.5]
+
+.Washed gut. 	 *COOKERY*  /30/ [patch:3] :148: 
+{* gut} 	[remove] [patchwise] [name:Washed %s] [naming:original] 'Gut'
+{Water}			#10#
+[SPOILAGE_DAYS:2]
+[CARB:0]
+[FAT:60]
+[PROTEIN:10]
+[WATER:0]
+[WEIGHT:0.2]
+[PRICE:0]
+[TILEGFX:bc-gut]
+
+.Reindeer blood. 	*COOKERY*  /20/ :148: 
+{*carcass*} 		'Pick up reindeer carcass' 
+{Branch}		[remove] [boil]	'+for stirring'
+[SPOILAGE_DAYS:2]
+[CARB:2]
+[FAT:2]
+[PROTEIN:7]
+[WATER:98]
+[WEIGHT:4]
+[PRICE:0]
+
+.Elk blood. 	*COOKERY*  /20/ :148: 
+{*elk carcass*} 		'Pick up elk carcass' 
+{Branch}		[remove] [boil]	'+for stirring'
+[SPOILAGE_DAYS:2]
+[CARB:2]
+[FAT:2]
+[PROTEIN:7]
+[WATER:98]
+[WEIGHT:6]
+[PRICE:0]
+
+
+[SUBMENU_END:meat]
+

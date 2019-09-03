@@ -1,0 +1,14 @@
+// Part of Buoidda's crafts 1.5+
+.Barkware.	-A- *MAKE*
+.Fletching.	-F- *MAKE*
+.Bowying.	-O- *MAKE*
+.Toolmaking.	-M- *MAKE*
+.Ironworking.	-I- *MAKE*
+.Forging.	-S- *MAKE*
+.Boneworking.	-N- *MAKE*
+.Hideworking.	-H- *MAKE*
+.Earthenware.	-E- *MAKE*
+.Knitting.	-K- *MAKE*
+
+
+
