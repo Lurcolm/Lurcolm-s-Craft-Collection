@@ -25,33 +25,32 @@
 // Attack lowered from 6.
 // Buoidda's boneworking - Bone spear now equals former javelin damage with added blunt damage.
 
-//.Primitive bow. "Juniper bow" [effort:2] [phys:stance,arms]	%25%	*COMMON*		/80/ |0|
-//{Slender tree trunk} [remove] 
-//{Knife}
-//{Tying equipment} [remove]
-// Replaced by buoidda's bowying mod
+.Stone Spear. "Spear" [effort:2] [phys:arms,hands] *CARPENTRY* 	/3h/
+{Stone}	'+for blade' [remove] [noquality]
+{Stone} '+For grinding an edge' [noquality]
+{Rock}	'+for knapping' [noquality]
+{slender tree trunk}	[remove] [noquality]
+{Rope}	[remove]
+{Knife}
+[BLUNT_ATTACK:3]
+[POINT_ATTACK:6]
+[TILEGFX:llc-stnspear]
+//Lurolm's Modifications
 
-//.Shortbow. [effort:2] [phys:stance,arms] *CARPENTRY*		/320/ |2|
-//{Board} [remove] 
-//{Axe} <Carving axe>
-//{Knife}
-//{Tying equipment} [remove]
-// Replaced by buoidda's bowying mod
+.Wooden Maul. "maul" [effort:3] [phys:arms,hands] *Carpentry* /5h/
+{log}					[remove] [ground] [noquality]
+{axe} <handaxe>		'+for cutting rough shape'
+{axe} <Carving Axe>	'+for refining shape'
+{fire}			'+for hardening'
+//Lurolm's Modifications
 
-//.Arrow. [effort:1] [phys:hands,one-armed]  	*CARPENTRY*        /30/    [patch:5]
-//{Branch}   [remove] [patchwise] [noquality]
-//{Knife}
-//{Feather} (3) [remove] [patchwise] [noquality]
-//{Tying equipment} [remove] [patchwise] 
-//{Rock} [remove] [patchwise] [noquality]
-// Replaced by buoidda's fletching mod
+.Small flail. "Small Flail" [effort:2] [phys:arms,one-armed] *CARPENTRY*   		/60/ 			%30%  	|-1|	
+{Slender trunk} [remove]
+{Rope}		[remove]
+{Axe} <Carving axe>		
+{Knife}
+//Lurolm's Modifications
 
-//.Blunt arrow. [effort:1] [phys:hands,one-armed]  *CARPENTRY*       /45/    [patch:5]
-//{Branch}   [remove] [patchwise] [noquality]
-//{Feather} (3) [remove] [patchwise] [noquality]
-//{Tying equipment} [remove] [patchwise] 
-//{Knife}
-// Replaced by buoidda's fletching mod
 
 [SUBMENU_END:weapon]
 
@@ -105,6 +104,24 @@
 {Knife}
 {*Cord} 	[remove]	'Cord'
 // Tying equipment changed to Cord
+
+.Wooden comb.	"Hunting horn" [effort:1] [phys:hands,one-armed] *CARPENTRY* %-20% /3h/
+{block of wood}	1	[remove] [noquality]			'+Wooden Block'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[MATERIAL:wood]
+[PRICE:2.5]
+[TILEGFX:lcc-wcomb]
+//Lurolm's Modifications
+
+.Wooden hook. "Hunting Horn" [effort:1] [phys: hand, arm] *CARPENTRY* /1h/
+{block of wood}	1	[remove] [noquality]			'+Wooden Block'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[MATERIAL:wood]
+[PRICE:2.5]
+[TILEGFX:lcc-hook]
+//Lurolm's Modifications
 
 [SUBMENU_END:utility article]
 

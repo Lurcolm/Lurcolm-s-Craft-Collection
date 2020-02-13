@@ -71,16 +71,17 @@
 [TILEGFX:rc-cloth]
 // Buoidda's addition based on above
 
-.Spindle and Distaff.	"Wooden stake"	*CARPENTRY*	%25%		/45/	[effort:1] [phys:hands]
-{Staff}			(1) 	[remove] '+to hold the fibre'
-{Rock}			(1) 	[remove] '+for a spindle'
-{*Cord}	(1) 			[remove] 'Cord'
-{Knife}
-[WEIGHT:2]
-[TYPE:tool]
-[PRICE:10] 
-[TILEGFX:rc-distaff]
+//.Spindle and Distaff.	"Wooden stake"	*CARPENTRY*	%25%		/45/	[effort:1] [phys:hands]
+//{Staff}			(1) 	[remove] '+to hold the fibre'
+//{Rock}			(1) 	[remove] '+for a spindle'
+//{*Cord}	(1) 			[remove] 'Cord'
+//{Knife}
+//[WEIGHT:2]
+//[TYPE:tool]
+//[PRICE:10] 
+//[TILEGFX:rc-distaff]
 // Icon provided by Kaaven from the Urw Forums
+// Is not needed already one exist
 
 .Loom.			"Board"		*CARPENTRY*	|1|		/3h/	[noquality]	[effort:2] [phys:arms,hands,stance]
 {Board} 	 		(3) 	[remove]
@@ -334,12 +335,3 @@
 [PRICE:8]
 
 [SUBMENU_END:Woollen Garments]
-
-
-//[SUBMENU_START:Testing]
-//.Thread from Nettle. (10) "cord" [noquality] /1/
-//.Woodsman's axe. %100% /1/
-//.Pot. /1/ [noquality]
-//.Wet Retted Nettles. (10) "hemp" [noquality] /1/
-//
-//[SUBMENU_END:Testing]
