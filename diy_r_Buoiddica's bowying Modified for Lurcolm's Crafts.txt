@@ -165,18 +165,31 @@
 [TILEGFX:wp-huntbow]
 //To adjust the stats of the Hunting Bow
 
-//.Retiller staff-bow. *COMMON* "Shortbow" %100% /1/
-//{Staff-bow}		 [remove]
-//[NAME:Staff-bow]
-//[BLUNT_ATTACK:-]
-//[EDGE_ATTACK:-]
-//[POINT_ATTACK:6]
-//[AD_CLASS:0/0]
-//[WEIGHT:4]
-//[SKILL:bow]
-//[PRICE:80]
-//[TILEGFX:bc-staffbow]
+.Retiller staff-bow. *COMMON* "Shortbow" %100% /1/
+{Staff-bow}		 [remove]
+[NAME:Staff-bow]
+[BLUNT_ATTACK:-]
+[EDGE_ATTACK:-]
+[POINT_ATTACK:6]
+[AD_CLASS:0/0]
+[WEIGHT:4]
+[SKILL:bow]
+[PRICE:80]
+[TILEGFX:bc-staffbow]
 // To upgrade staff-bows to this mod's stats
+
+
+.Crossbow. "Crossbow" [Effort:2] [phys:arms,hands] *CARPENTRY* %-10% /400/ \1d\ |2|
+{Split trunk} 			[remove] 	'Split birch trunk'
+{board}	2			[remove]	'+For body'
+{staff}				[remove]	'+for mechanisms and struts'
+{*glue}				[remove]	'Glue for attaching pieces'
+{rope}				[remove]	'+For securing body'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+{Fire} 						'+for treating the belly'
+{Bowstring}			[remove]
+
 
 [SUBMENU_END:Bowying]
 
